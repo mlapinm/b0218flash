@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         try{
             assert  cameraManager != null;
             String cameraId = cameraManager.getCameraIdList()[0];
+
             cameraManager.setTorchMode(cameraId, true);
         }catch (CameraAccessException e){
             e.printStackTrace();
