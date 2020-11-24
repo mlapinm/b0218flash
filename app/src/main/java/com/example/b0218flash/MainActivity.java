@@ -17,9 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
-    public void onClickFlash(View view){
         CameraManager cameraManager = (CameraManager)getSystemService(Context.CAMERA_SERVICE);
         try{
             assert  cameraManager != null;
@@ -28,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         }catch (CameraAccessException e){
             e.printStackTrace();
         }
+    }
+
+    public void onClickFlash(View view){
+        onDestroy();
     }
 
     @Override
