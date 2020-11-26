@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CameraManager cameraManager = (CameraManager)getSystemService(Context.CAMERA_SERVICE);
         try{
+            CameraManager cameraManager = (CameraManager)getSystemService(Context.CAMERA_SERVICE);
             assert  cameraManager != null;
             String cameraId = cameraManager.getCameraIdList()[0];
 
@@ -46,3 +46,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
